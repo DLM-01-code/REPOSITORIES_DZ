@@ -4,6 +4,10 @@ def get_days_from_today(date):
     today = datetime.now()
     return (today - date).days
 
+date_str = input("Попрошу вводить таким образом 🙃 YYYY-MM-DD: ")
 
-date = datetime(2020, 10, 9).center(100)
-print(f"-{get_days_from_today(date)}")
+try:
+    date = datetime.strptime(date_str, "%Y-%m-%d")
+    print(f"if -{get_days_from_today(date)}")
+except ValueError:
+    print("Некорректные данные")
