@@ -8,6 +8,6 @@ date_str = input("Попрошу вводить таким образом 🙃 Y
 
 try:
     date = datetime.strptime(date_str, "%Y-%m-%d")
-    print(f"if -{get_days_from_today(date)}")
+    print(f"-{get_days_from_today(date)}")
 except ValueError:
     print("Некорректные данные")
